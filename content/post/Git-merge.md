@@ -3,8 +3,13 @@ title: "[Git] Merge vs Squash vs Rebase"
 date: 2023-08-10T10:52:24+09:00
 draft: false
 pin: true
+summary: "Git 다양한 Merge 방법"
 ---
 #git
+
+# Git 다양한 Merge 방법
+
+<br>
 
 # Merge(Fast-Forward)
 ![fast](https://hudi.blog/static/f2116265ae12bf9d745ec4991962b70e/ac7a9/fast-forward-merge.png)
