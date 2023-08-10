@@ -3,7 +3,7 @@ title: "Schema-validation: missing table [name] 에러"
 date: 2023-08-10T19:02:31+09:00
 draft: false
 pin: true 
-summary: ""
+summary: "missing table error"
 tags: [spring, error, mysql]
 ---
 
