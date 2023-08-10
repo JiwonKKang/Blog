@@ -1,5 +1,5 @@
 baseURL = "https://jiwonkkang.github.io/"
-languageCode = "zh-cn"
+languageCode = "ko"
 title = "Jiwon's blog"
 theme = "github-style"
 googleAnalytics = "UA-123456-789"
