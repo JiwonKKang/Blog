@@ -7,21 +7,21 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  author = "MeiK"
+  author = "JiwonKkang"
   description = "In solitude, where we are least alone."
-  github = "MeiK2333"
-  facebook = "MeiK2333"
-  twitter = "MeiK2333"
-  linkedin = "MeiK2333"
-  instagram = "MeiK2333"
-  tumblr = "MeiK2333"
-  email = "meik2333@gmail.com"
-  url = "https://meik2333.com"
+  github = "JiwonKkang"
+  facebook = "JiwonKkang"
+  twitter = "JiwonKkang"
+  linkedin = "JiwonKkang"
+  instagram = "JiwonKkang"
+  tumblr = "JiwonKkang"
+  email = "kangji149@naver.com"
+  url = "https://jiwonkkang.github.io"
   keywords = "blog, google analytics"
   rss = true
   lastmod = true
   favicon = "/images/github.png"
-  location = "China"
+  location = "Korea"
   userStatusEmoji = "😀"
   enableGitalk = true
     
