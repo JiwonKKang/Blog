@@ -2,7 +2,7 @@ baseURL = "https://jiwonkkang.github.io/"
 languageCode = "ko"
 title = "Jiwon's blog"
 theme = "github-style"
-googleAnalytics = "UA-123456-789"
+googleAnalytics = "G-RHFSNZ7DGH"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
