@@ -1,6 +1,6 @@
 baseURL = "https://jiwonkkang.github.io/"
 languageCode = "zh-cn"
-title = "MeiK's blog"
+title = "Jiwon's blog"
 theme = "github-style"
 googleAnalytics = "UA-123456-789"
 pygmentsCodeFences = true
