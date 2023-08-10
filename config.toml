@@ -7,22 +7,19 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  author = "JiwonKkang"
+  author = "JiwonKKang"
   description = "In solitude, where we are least alone."
-  github = "JiwonKkang"
-  facebook = "JiwonKkang"
-  twitter = "JiwonKkang"
-  linkedin = "JiwonKkang"
-  instagram = "JiwonKkang"
-  tumblr = "JiwonKkang"
+  github = "JiwonKKang"
+  facebook = "JiwonKKang"
+  twitter = "JiwonKKang"
+  linkedin = "JiwonKKang"
+  instagram = "JiwonKKang"
+  tumblr = "JiwonKKang"
   email = "kangji149@naver.com"
   url = "https://jiwonkkang.github.io"
-  keywords = "blog, google analytics"
+  utterances = "JiwonKKang/JiwonKKang.github.io"
   rss = true
   lastmod = true
-  favicon = "/images/github.png"
-  location = "Korea"
-  userStatusEmoji = "😀"
   enableGitalk = true
     
   [params.gitalk]
@@ -37,14 +34,6 @@ pygmentsUseClasses = true
     pagerDirection = "last" # Comment sorting direction, available values are 'last' and 'first'.
     createIssueManually = true # 设置为true，如果是管理员登录，会自动创建issue，如果是false，需要管理员手动添加第一个评论(issue)
     distractionFreeMode = false # Enable hot key (cmd|ctrl + enter) submit comment.    
-    proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token" # 可以自行添加反向代理
-  [[params.links]]
-    title = "Link"
-    href = "https://github.com/meik2333"
-  [[params.links]]
-    title = "Link2"
-    href = "https://meik2333.com"
-    icon = "https://meik2333.com/images/avatar.png"
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
