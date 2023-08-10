@@ -1,1 +1,5 @@
+---
+pin: true
+---
+
 Hello world
