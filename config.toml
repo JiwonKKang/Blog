@@ -8,14 +8,9 @@ pygmentsUseClasses = true
 
 [params]
   author = "JiwonKKang"
-  description = "In solitude, where we are least alone."
+  description = "디버깅중..."
   github = "JiwonKKang"
-  facebook = "JiwonKKang"
-  twitter = "JiwonKKang"
-  linkedin = "JiwonKKang"
-  instagram = "JiwonKKang"
-  tumblr = "JiwonKKang"
-  email = "kangji149@naver.com"
+  email = "rkdwldnjs878@gmail.com"
   url = "https://jiwonkkang.github.io"
   utterances = "JiwonKKang/JiwonKKang.github.io"
   rss = true
