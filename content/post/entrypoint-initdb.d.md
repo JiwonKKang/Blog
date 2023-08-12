@@ -2,7 +2,7 @@
 title: "entrypoint-initdb.d sql파일을 못읽는 오류"
 date: 2023-08-10T15:33:27+09:00
 draft: false
-pin: true
+pin: false
 summary: "entrypoint-initdb.d sql 파일을 못읽는 오류"
 tags: [Docker, Error]
 ---

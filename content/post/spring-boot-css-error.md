@@ -2,7 +2,7 @@
 title: "SpringBoot css 깨짐현상"
 date: 2023-08-10T20:12:58+09:00
 draft: false
-pin: true
+pin: false
 summary: "스프링부트 css 깨짐현상"
 tags: [spring, error]
 ---

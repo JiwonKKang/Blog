@@ -2,7 +2,7 @@
 title: "SpringBoot에서 Redis를 적용해보자"
 date: 2023-08-12T23:26:47+09:00
 draft: false
-pin: true
+pin: false
 summary: "카카오API를 활용한 약국길찾기 서비스에 Redis를 적용해보자"
 tags: [spring]
 ---

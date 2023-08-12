@@ -2,7 +2,7 @@
 title: "무중단 배포는 어떻게할까?"
 date: 2023-08-11T09:25:40+09:00
 draft: false
-pin: true
+pin: false
 summary: "여러가지 배포의 종류를 알아보자"
 tags: [devops]
 ---
