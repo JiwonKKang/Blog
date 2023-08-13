@@ -42,6 +42,76 @@ Redis가 데이터 영속화를 하는 방법 스냅샷을 찍어 정기적으�
 
 파일의 쓰기 타이밍은 설정파일, config 커맨드로 설정 가능하다.
 
+> # Redis 구조
+
+## Stand Alone
+
+![](https://blog.octo.com/wp-content/uploads/2017/08/screen-shot-2017-08-11-at-14-34-30.png)
+
+기본적인 Redis 1개로만 구성된 구조입니다.
+## Master - Slave(Replica)
+
+![](https://cdn.educba.com/academy/wp-content/uploads/2022/11/Redis-Master-Slave..jpg)
+
+Redis Master 1개의 여러개의 Redis Slave로 구성할수 있습니다.
+Redis Slave는 Redis Mater와 계속하여 데이터를 싱크합니다. 
+
+기본적으로 Redis Slave는 read만 지원하게됩니다.
+
+Redis Master 장애시 Fail Over 대처가 어렵습니다.(할순 있습니다.)
+## Sentinel
+
+![](https://t1.daumcdn.net/cfile/tistory/995CB7335A02B5D102)
+
+Redis Sentinel은 Redis 서버에 대한 상태를 감시합니다.
+Redis Master에 장애가 발생할 경우 Redis Slave를 Redis Master로 자동으로 변경하여 Fail Over에 대처합니다.
+
+
+## Cluster
+
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F47nR9%2Fbtq4bCW6z5w%2FrgvB2GyckL8LCjXWtDHpV0%2Fimg.png)
+
+Sentinel 구조 처럼 서로 통신하며 장애시에 Mater와 Slave를 전환 할 수 있습니다.
+
+또한 데이터 샤딩을 통해 임의로 데이터셋을 나누어서 저장하기때문에 성능면으로도 좋습니다.
+
+<br>
+
+~~~
+Availability : Cluster >= Sentinel > Master-Replica > SA
+
+Performance : Cluster > Sentinel > Master-Replica > SA
+
+Efficiency : SA > Master-Replica >= Sentinel > Cluster
+~~~
+
+<br>
+
+> # MemCached와의 차이점
+
+<br>
+
+1. DataType
+	- Redis : Hash, List, Set, Sorted Set, Geo, String
+	- Memcached : String
+1. Thread
+	- Redis : Single Thread
+	- Memcached : Multi Thread
+1. Scale
+	- Redis : ScaleOut
+	- Memcached : Scale Up
+1. Memory Policy
+	- Redis : no eviction, volatile-lue, volatile-ttl, allkey-random
+	- Memcached : LRU
+1. Persistence
+	- Redis : AOF, RDB
+	- Memcached : None
+1. ETC
+	- Redis : LUA Script
+
+<br>
+
+
 > # SpringBoot에서 Redis 적용
 
 Spring Boot 에서 Redis 를 사용하는 방법은 `RedisRepository` 와 `RedisTemplate` 두 가지가 있습니다.
