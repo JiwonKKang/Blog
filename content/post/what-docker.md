@@ -1,10 +1,10 @@
 ---
 title: "Docker란 무엇일까?"
 date: 2023-08-14T11:27:47+09:00
-draft: true
+draft: false
 pin: false 
 summary: "Docker 파헤치기"
-tags: []
+tags: [docker]
 ---
 
 # 도커를 알아보자
