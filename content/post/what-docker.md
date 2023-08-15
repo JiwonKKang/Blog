@@ -139,8 +139,15 @@ VM에서는 각 게스트 머신별로 독립적인 공간을 제공하고 서�
 
 <br>
 
-- cgroup 은 컴퓨터의 자원(CPU, 메모리, network, storage I/O)가 각 프로세스 별로 독립적으로 격리되어 할당한다.
+- cgroups 은 컴퓨터의 자원(CPU, 메모리, network, storage I/O)가 각 프로세스 별로 독립적으로 격리되어 할당한다.
  ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbCR0JD%2Fbtq6CABwrdM%2F5fnxMb34lUQwDhC6VImUk0%2Fimg.png)
+
+- cgroups는 계층 구조를 사용하여 프로세스를 그룹화하여 관리할 수 있다. 예를 들어 사용자 애플리케이션과 서버와 같은 데몬 프로세스를 나눠, 각각의 그룹에 CPU 사용량을 할당할 수 있다.
+
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbRTEP9%2FbtqRwbiSoqV%2FYJ1fm1HMTMrWYwSNO6T6YK%2Fimg.png)
+
+<br>
+
 
 > ## 정리
 
