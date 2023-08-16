@@ -159,7 +159,7 @@ root@b99ed1baaccc:/# ls
 
 run 명령은 pull, create, start명령어를 일괄적으로 실행한 후 attach가 가능한 컨테이너라면 컨테이너 내부로 들어갑니다.
 
-하지만 create 명령어는 도커 이밎를 pull한 후에 컨테이너를 생성만 할 뿐 start attach를 실행하지는 않습니다.
+하지만 create 명령어는 도커 이미지를 pull한 후에 컨테이너를 생성만 할 뿐 start attach를 실행하지는 않습니다.
 
 보통은 생성과 동시에 실행시키기 때문에 run을 주로 씁니다.
 
@@ -1214,7 +1214,7 @@ sudo docker exec network_container_2 ifconfig
 
 ### 브리지 네트워크와 —net-alias
 
-특정 호스트 이름으로 컨테이너 여러개이 접근 가능
+특정 호스트 이름으로 컨테이너 여러개에 접근 가능
 
 ```bash
 sudo docker run -itd --name network_alias_container1 \\
