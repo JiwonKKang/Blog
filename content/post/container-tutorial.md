@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "[Docker] 컨테이너 다루기"
 date: 2023-08-16T20:14:00+09:00
-draft: true
+draft: false
 pin: false 
-summary: ""
-tags: []
+summary: "컨테이너를 파헤쳐보자"
+tags: [docker]
 ---
 
 > # 컨테이너 다루기
