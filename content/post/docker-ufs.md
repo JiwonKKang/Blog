@@ -81,7 +81,7 @@ container 를 기동할 때 사용했던 image 는 변경되지 않고 그대로
 먼저 ubuntu:latest image 를 이용하여 container 하나를 기동한다.  
 ubuntu image 는 docker pull 을 통해 이미 local 에 저장한 상태라고 가정한다.
 
-![](http://cloudrain21.com/wordpress/wp-content/uploads/2019/09/docker-ps.png)
+![](/images/docker/docker1.png)
 
 image 크기가 64.2 MB 이고, 이를 이용하여 container 를 기동하면 container size 또한 64.2 MB 인 것을 볼 수 있다.  
 Container size 는 다음의 두 가지 종류를 고려해야 한다.
@@ -95,17 +95,17 @@ docker ps 결과에서 SIZE 항목을 보면 **0B (virtual 64.2MB)** 결과를
 
 이 상태에서 container 내부에서 약 4 MB 짜리 파일을 생성해본다.
 
-![](http://cloudrain21.com/wordpress/wp-content/uploads/2019/09/dd.png)
+![](/images/docker/docker2.png)
 
 이 상태로 외부에서 container 크기를 조회해보면 다음과 같이 size 부분(4.1MB)과 virtual size 부분(68.3MB)이 모두 4.1 MB 만큼 증가하였음을 볼 수 있다.  
 이는 곧 writable layer 에 4.1 MB 만큼 변경이 생겼다는 것을 의미한다.
 
-![](http://cloudrain21.com/wordpress/wp-content/uploads/2019/09/container-size.png)
+![](/images/docker/docker3.png)
 
 이렇게 container 에 변경을 가한 후 이를 바탕으로 새로운 image 를 만들어본다. (docker commit, docker tag)  
 image 이름은 container_size_test 라고 지정하였다.
 
-![](http://cloudrain21.com/wordpress/wp-content/uploads/2019/09/commit.png)
+![](/images/docker/docker4.png)
 
 docker image history 명령을 통해 새로 만든 image 의 history 정보를 조회해보면, 맨 상단의 layer 가 최종적으로 image 에 적용된 부분이라는 것을 알 수 있다. (4.1 MB)  
 이제 위에서 생성한 container_size_test 라는 image 를 이용하여 container 를 구동하면, 이 모든 layer 가 read-only layer 가 되는 것이다.  
@@ -161,7 +161,7 @@ Storage Driver 별로 특성이 다르고 장단점이 있으므로, [이곳](h
 나의 개인 용 PC 에는 Centos7, Docker 1.11.1 이 설치되어 있어서 Docker 의 Default Storage Driver 로 devicemapper 를 사용하고 있다.  
 (이는 docker info 명령의 'Storage Driver' 항목을 통해 확인할 수 있다.)
 
-![](http://cloudrain21.com/wordpress/wp-content/uploads/2019/09/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA-2019-09-04-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-10.28.11.png)
+![](/images/docker/docker5.png)
 
 결국 Container 상에서 변경되는 사항들은 Storage Driver 의 도움에 의해 Backing filesystem(/var/lib/docker)에 저장되는 것이다.  
 (위에서 언급한 **Volume 기능은 이러한 Storage Driver 의 도움없이 직접적으로 Host 의 Filesystem 에 접근하기 때문에 성능 상 잇점**이 있다.)
@@ -170,7 +170,7 @@ Storage Driver 가 모든 종류의 Host filesystem 을 Backing filesystem 으�
 다음은 Storage Driver 별로 지원하는 Backing filesystem 을 나타낸다.  
 기억할 필요까지는 없고 필요할 때 찾아볼 수 있도록 하자.
 
-![](http://cloudrain21.com/wordpress/wp-content/uploads/2019/09/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA-2019-09-04-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-10.30.27-1024x392.png)
+![](/images/docker/docker6.png)
 
 Backing filesystem 을 조금 더 이해하자는 의미에서, 나의 Desktop 환경을 기준으로 Backing filesystem 과 container layer 의 연관관계를 잠깐 들여다보자.  
 Union filesytem 의 최상단에 위치하는 container layer(writable layer)는 그 자체로는 의미가 없다.  
