@@ -402,7 +402,7 @@ full id는 docker inspect 명령으로 확인이 가능합니다.
 sudo docker inspect mycentos | grep Id
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f135a39b-4b48-4a9f-beca-0f81f98fd112/Untitled.png)
+![Untitled](https://island-primula-917.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff135a39b-4b48-4a9f-beca-0f81f98fd112%2FUntitled.png?table=block&id=0b651fd7-e9fb-4dc6-b13b-ed7f41a0c465&spaceId=9bc99f35-edf4-4599-af44-3f7fb94b56cd&width=2000&userId=&cache=v2)
 
 ### IMAGE
 
@@ -418,7 +418,7 @@ COMMAND는 컨테이너가 시작될 떄 실행할 명령어 커맨드는 대부
 sudo docker run -it ubuntu:18.04 echo "hello world!"
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8e62bf4-b7d1-4dec-a166-cd7b73bd9c8d/Untitled.png)
+![Untitled](https://island-primula-917.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd8e62bf4-b7d1-4dec-a166-cd7b73bd9c8d%2FUntitled.png?table=block&id=131485db-7120-49c6-b92f-0b729b8828ae&spaceId=9bc99f35-edf4-4599-af44-3f7fb94b56cd&width=2000&userId=&cache=v2)
 
 그러나 위 명령으로 생성된 컨테이너는 ubuntu:18.04에 내장된 /bin/bash command를 덮어쓰기 때문에 상호입출력이 가능한 쉘이 실행되지 않아 "hello world!"만 실행되고 컨테이너 종료
 
@@ -430,7 +430,7 @@ sudo docker run -it ubuntu:18.04 echo "hello world!"
 sudo docker rename jolly_benz my_ubuntu1804
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60d49fed-bb24-4a85-a293-ce6361e2d41c/Untitled.png)
+![Untitled](/images/container-tutorial/1.png)
 
 # 컨테이너 삭제
 
@@ -452,7 +452,7 @@ sudo docker rm sweet_pascal
 sudo docker ps -a
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b11ee4ac-a8e2-4961-a1fe-3a3e5c814304/Untitled.png)
+![Untitled](/images/container-tutorial/2.png)
 
 이번에는 mycentos 컨테이너를 삭제합니다.
 
@@ -460,7 +460,7 @@ sudo docker ps -a
 sudo docker rm mycentos
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a19190e9-20bf-44f4-913a-89242fd320f9/Untitled.png)
+![Untitled](/images/container-tutorial/3.png)
 
 에러가 났네요?!
 
@@ -480,7 +480,7 @@ sudo docker rm mycentos
     ```
     
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2baffdfe-4fcc-4f7d-b62f-4350b4d655b8/Untitled.png)
+![Untitled](/images/container-tutorial/4.png)
 
 돌리고 던져놓은 컨테이너가 너무나 많아 일일히 삭제하기가 귀찮다면
 
@@ -490,11 +490,11 @@ sudo docker container prune
 
 진짜로 다 지울거냐를 물어봅니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8e3bc1b1-84d3-4be3-b193-e926bb466f7b/Untitled.png)
+![Untitled](/images/container-tutorial/5.png)
 
 y를 입력하면 다 지워집니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/18dac34a-4e8f-4f9c-a125-b51c8d1656ee/Untitled.png)
+![Untitled](/images/container-tutorial/6.png)
 
 docker ps 명령의 -a와 -q 옵션을 조합해 삭제
 
@@ -527,7 +527,7 @@ root@6f0c1e0f544b:/# apt install net-tools
 root@6f0c1e0f544b:/# ifconfig
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4e094310-17ac-4534-8b60-b73e1d612a92/Untitled.png)
+![Untitled](/images/container-tutorial/7.png)
 
 docker의 NAT IP인 172.17.0.2를 할당받은 eth0 인터페이스와 로컬 호스트인 lo인터페이스가 있습니다.
 
@@ -558,11 +558,11 @@ root@1f22a7d7162d:/# service nginx start
 root@1f22a7d7162d:/# service nginx status
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4f0c548c-0c53-48bd-b091-94de88f72198/Untitled.png)
+![Untitled](/images/container-tutorial/8.png)
 
 GCP compute engine vm의 외부 ip로 접속하면 아래와 같은 화면이 보입니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/12e9bd19-927d-4f64-9575-b953b4525aff/Untitled.png)
+![Untitled](/images/container-tutorial/9.png)
 
 그런데 이런식으로 Docker를 쓰면 Docker를 쓰는 의미가 딱히 없죠?
 
@@ -572,11 +572,11 @@ GCP compute engine vm의 외부 ip로 접속하면 아래와 같은 화면이 �
 sudo docker run --name my-apache-server -p 8080:80 httpd
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e1ea45de-b16f-40b4-bff9-454478ec3fb8/Untitled.png)
+![Untitled](/images/container-tutorial/10.png)
 
 이제 8080포트로 접속해보겠습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c45af73-09b7-4219-97fa-05ab63e48c58/Untitled.png)
+![Untitled](/images/container-tutorial/11.png)
 
 엇 접속이 안됩니다. ㅠㅠ
 
@@ -588,11 +588,9 @@ sudo docker run --name my-apache-server -p 8080:80 httpd
     
     1. 방화벽 메뉴로 들어갑니다.
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d8dec52-2559-4e11-935f-13e280887b61/Untitled.png)
         
     2. 방화벽 규칙 만들기 버튼을 누릅니다.
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3bac158c-ab7c-4ba9-b127-0c00bedfe822/Untitled.png)
         
     3. 방화벽 규칙의 정보들을 입력한 후 만들기 버튼을 누릅니다.
         
@@ -602,12 +600,10 @@ sudo docker run --name my-apache-server -p 8080:80 httpd
         - 소스 IPv4 범위 : 0.0.0.0/0 (모두)
         - 프로토콜 및 포트 : TCP - 8080
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14340281-5a48-4a06-85a7-7c91bd8960e6/Untitled.png)
-        
 
 접속이 되는 것을 볼 수 있습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ae0c3f37-0b2a-4a43-a0e7-2486599f9635/Untitled.png)
+![Untitled](/images/container-tutorial/12.png)
 
 호스트의 IP의 port를 컨테이너의 IP와 port로 연결한다는 개념은 매우 중요합니다.
 
@@ -617,7 +613,7 @@ sudo docker run --name my-apache-server -p 8080:80 httpd
 
 순서를 정리하면 다름과 같습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/637421de-ca22-4d30-b906-e984f2eb4019/Untitled.png)
+![Untitled](/images/container-tutorial/13.png)
 
 그러나 다음같이 -p 80:81로 입력했다면 외부에서 웹 서버에 접근하지 못합니다.
 
@@ -669,11 +665,11 @@ docker ps 명령 결과의 PORTS 컬럼을 확인해보겠습니다.
 sudo docker ps
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/38329444-8662-4052-8df7-5a1ae83ee7c1/Untitled.png)
+![Untitled](/images/container-tutorial/14.png)
 
 이 예제에서는 호스트의 32768번 포트와 연결했습니다. 따라서 호스트이 IP와 32768번 포트로 워드프레스 웹 서버에 접근할 수 있습니다. 웹 브라우저로 [호스트 IP]:32768에 접근했을 때 다음과 같은 화면이 나타나면 워드프레스 컨테이너가 성공적으로 생성된 것입니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70da4d6c-b1ce-4e6d-a115-7aa572552632/Untitled.png)
+![Untitled](/images/container-tutorial/15.png)
 
 ### sudo docker run의 -d , -e, —link 옵션
 
@@ -710,7 +706,7 @@ sudo docker ps
     
     attach 쓰면 그냥 log만 나옵니다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d258bd2-7d63-44a0-b962-5e56bc3942a0/Untitled.png)
+  ![Untitled](/images/container-tutorial/16.png)
     
     그래서 exec 명령으로 컨테이너 내부의 bash쉘을 실행시켜야 합니다.
     
@@ -718,7 +714,7 @@ sudo docker ps
     sudo docker exec -it wordpressdb /bin/bash
     ```
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f95c1550-fbf7-49a1-bb39-8cba1f7d1af2/Untitled.png)
+  ![Untitled](/images/container-tutorial/17.png)
     
 
 —link 옵션
@@ -747,7 +743,7 @@ sudo docker ps
     sudo docker stop wordpress wordpressdb
     ```
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a2b8814-de18-4233-87c5-da89cb9bfb0c/Untitled.png)
+    ![Untitled](/images/container-tutorial/18.png)
     
     그리고 wordpress를 다시 실행시키면
     
@@ -755,7 +751,7 @@ sudo docker ps
     sudo docker start wordpress
     ```
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f933f193-5a79-4eed-9ea5-a0eed1bdb7d9/Untitled.png)
+  ![Untitled](/images/container-tutorial/19.png)
     
     에러가 납니다.
     
@@ -770,7 +766,7 @@ sudo docker ps
 
 위에서 생성했던 mysql 컨테이너는 mysql:5.7이라는 이미지로 생성됐지만 워드프레스 블로그를 위한 DB등의 정보는 컨테이너가 갖고 있습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0294b4e0-c687-4300-93e0-9d92d4d5d834/Untitled.png)
+![Untitled](/images/container-tutorial/20.png)
 
 이미 생성된 이미지는 어떠한 경우로도 변경되지 않으며, 컨테이너 계층에 원래 이미지에서 변경된 파일시스템 등을 저장합니다. 이미지에 mysql을 실행하는 데 필요한 애플리케이션 파일이 들어있다면 컨테이너 계층에는 워드프레스에서 쓴 로그인 정보나 게시글 등과 같이 데이터베이스를 운용하면서 쌓이는 데이터가 저장
 
@@ -838,11 +834,11 @@ sudo docker rm wordpressdb_hostvolume wordpress_hostvolume
 ls ~/wordpress_db/
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7c8d83e-aac7-4c46-a471-5445897196b7/Untitled.png)
+![Untitled](/images/container-tutorial/21.png)
 
 ~/wordpress_db:/var/lib/mysql 이 둘은 동기화 되는 개념이 아니라 그냥 같은 디렉토리
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/add07d52-d802-42e1-8ab9-5e73557252f0/Untitled.png)
+![Untitled](/images/container-tutorial/22.png)
 
 디렉토리 뿐만 아니라 단일 파일도 가능, 여러개의 -v 옵션도
 
@@ -858,7 +854,7 @@ ubuntu:20.04
 root@2b574c6896cc:/# cat hello && cat hello2
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0de9cb42-93ba-4453-b138-5ae918122cdf/Untitled.png)
+![Untitled](/images/container-tutorial/23.png)
 
 원래 호스트에는 ~/wordpress_db 디렉토리가 존재하지 않았음
 
@@ -876,7 +872,7 @@ root@2b574c6896cc:/# cat hello && cat hello2
     ls /home/testdir_2/
     ```
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ae38b24f-2fd7-44f8-8b51-b82d8ea9cd82/Untitled.png)
+    ![Untitled](/images/container-tutorial/24.png)
     
 2. 이제 -v 옵션을 사용해서 컨테이너를 생성
     
@@ -887,7 +883,7 @@ root@2b574c6896cc:/# cat hello && cat hello2
     ls /home/testdir_2/
     ```
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87a51a7f-8df7-44a0-be23-8501d307c3b1/Untitled.png)
+   ![Untitled](/images/container-tutorial/25.png)
     
 
 공유한 컨테이너 디렉토리자체가 호스트의 디렉토리 내용으로 덮어씌워짐
@@ -908,9 +904,9 @@ ubuntu:20.04 \\
 ls /home/testdir_2
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b686bd6-29af-4a4d-8dc1-584889e01a7f/Untitled.png)
+![Untitled](/images/container-tutorial/26.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a47b7974-b393-4267-b222-f705c2f9ce05/Untitled.png)
+![Untitled](/images/container-tutorial/27.png)
 
 ## 도커볼륨
 
@@ -926,43 +922,11 @@ ls /home/testdir_2
 sudo docker volume create --name myvolume
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/601da179-6314-4dac-a942-6cbd4d1576b5/Untitled.png)
+![Untitled](/images/container-tutorial/28.png)
 
 플러그인 드라이버를 설정해 여러 종류의 스토리지 백엔드를 쓸 수 있지만 여기서는 기본적으로 제공되는 드라이버인 local을 사용
 
 이 볼륨은 로컬호스트에 저장되며 도커엔진에 의해 생성되고 삭제
-
-- **Volume plugins**
-    
-    |Plugin|Description|
-    |---|---|
-    |[https://github.com/Azure/azurefile-dockervolumedriver](https://github.com/Azure/azurefile-dockervolumedriver)|Lets you mount Microsoft [https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/) shares to Docker containers as volumes using the SMB 3.0 protocol. [https://azure.microsoft.com/blog/persistent-docker-volumes-with-azure-file-storage/](https://azure.microsoft.com/blog/persistent-docker-volumes-with-azure-file-storage/).|
-    |[https://github.com/RedCoolBeans/docker-volume-beegfs](https://github.com/RedCoolBeans/docker-volume-beegfs)|An open source volume plugin to create persistent volumes in a BeeGFS parallel file system.|
-    |[https://github.com/blockbridge/blockbridge-docker-volume](https://github.com/blockbridge/blockbridge-docker-volume)|A volume plugin that provides access to an extensible set of container-based persistent storage options. It supports single and multi-host Docker environments with features that include tenant isolation, automated provisioning, encryption, secure deletion, snapshots and QoS.|
-    |[https://github.com/contiv/volplugin](https://github.com/contiv/volplugin)|An open source volume plugin that provides multi-tenant, persistent, distributed storage with intent based consumption. It has support for Ceph and NFS.|
-    |[https://github.com/rancher/convoy](https://github.com/rancher/convoy)|A volume plugin for a variety of storage back-ends including device mapper and NFS. It’s a simple standalone executable written in Go and provides the framework to support vendor-specific extensions such as snapshots, backups and restore.|
-    |[https://github.com/omallo/docker-volume-plugin-dostorage](https://github.com/omallo/docker-volume-plugin-dostorage)|Integrates DigitalOcean’s [https://www.digitalocean.com/products/storage/](https://www.digitalocean.com/products/storage/) into the Docker ecosystem by automatically attaching a given block storage volume to a DigitalOcean droplet and making the contents of the volume available to Docker containers running on that droplet.|
-    |[https://www.drbd.org/en/supported-projects/docker](https://www.drbd.org/en/supported-projects/docker)|A volume plugin that provides highly available storage replicated by [https://www.drbd.org/](https://www.drbd.org/). Data written to the docker volume is replicated in a cluster of DRBD nodes.|
-    |[https://github.com/ScatterHQ/flocker](https://github.com/ScatterHQ/flocker)|A volume plugin that provides multi-host portable volumes for Docker, enabling you to run databases and other stateful containers and move them around across a cluster of machines.|
-    |[https://github.com/openstack/fuxi](https://github.com/openstack/fuxi)|A volume plugin that is developed as part of the OpenStack Kuryr project and implements the Docker volume plugin API by utilizing Cinder, the OpenStack block storage service.|
-    |[https://github.com/mcuadros/gce-docker](https://github.com/mcuadros/gce-docker)|A volume plugin able to attach, format and mount Google Compute [https://cloud.google.com/compute/docs/disks/persistent-disks](https://cloud.google.com/compute/docs/disks/persistent-disks).|
-    |[https://github.com/calavera/docker-volume-glusterfs](https://github.com/calavera/docker-volume-glusterfs)|A volume plugin that provides multi-host volumes management for Docker using GlusterFS.|
-    |[https://github.com/muthu-r/horcrux](https://github.com/muthu-r/horcrux)|A volume plugin that allows on-demand, version controlled access to your data. Horcrux is an open-source plugin, written in Go, and supports SCP, [https://www.minio.io/](https://www.minio.io/) and Amazon S3.|
-    |[https://github.com/hpe-storage/python-hpedockerplugin/](https://github.com/hpe-storage/python-hpedockerplugin/)|A volume plugin that supports HPE 3Par and StoreVirtual iSCSI storage arrays.|
-    |[https://infinit.sh/documentation/docker/volume-plugin](https://infinit.sh/documentation/docker/volume-plugin)|A volume plugin that makes it easy to mount and manage Infinit volumes using Docker.|
-    |[https://github.com/vdemeester/docker-volume-ipfs](https://github.com/vdemeester/docker-volume-ipfs)|An open source volume plugin that allows using an [https://ipfs.io/](https://ipfs.io/) filesystem as a volume.|
-    |[https://github.com/calavera/docker-volume-keywhiz](https://github.com/calavera/docker-volume-keywhiz)|A plugin that provides credentials and secret management using Keywhiz as a central repository.|
-    |[https://github.com/CWSpear/local-persist](https://github.com/CWSpear/local-persist)|A volume plugin that extends the default local driver’s functionality by allowing you specify a mountpoint anywhere on the host, which enables the files to always persist, even if the volume is removed via docker volume rm.|
-    |[https://github.com/NetApp/netappdvp](https://github.com/NetApp/netappdvp) (nDVP)|A volume plugin that provides direct integration with the Docker ecosystem for the NetApp storage portfolio. The nDVP package supports the provisioning and management of storage resources from the storage platform to Docker hosts, with a robust framework for adding additional platforms in the future.|
-    |[https://github.com/ContainX/docker-volume-netshare](https://github.com/ContainX/docker-volume-netshare)|A volume plugin that provides volume management for NFS 3/4, AWS EFS and CIFS file systems.|
-    |[https://scod.hpedev.io/docker_volume_plugins/hpe_nimble_storage/index.html](https://scod.hpedev.io/docker_volume_plugins/hpe_nimble_storage/index.html)|A volume plug-in that integrates with Nimble Storage Unified Flash Fabric arrays. The plug-in abstracts array volume capabilities to the Docker administrator to allow self-provisioning of secure multi-tenant volumes and clones.|
-    |[https://github.com/libopenstorage/openstorage](https://github.com/libopenstorage/openstorage)|A cluster-aware volume plugin that provides volume management for file and block storage solutions. It implements a vendor neutral specification for implementing extensions such as CoS, encryption, and snapshots. It has example drivers based on FUSE, NFS, NBD and EBS to name a few.|
-    |[https://github.com/portworx/px-dev](https://github.com/portworx/px-dev)|A volume plugin that turns any server into a scale-out converged compute/storage node, providing container granular storage and highly available volumes across any node, using a shared-nothing storage backend that works with any docker scheduler.|
-    |[https://github.com/quobyte/docker-volume](https://github.com/quobyte/docker-volume)|A volume plugin that connects Docker to [https://www.quobyte.com/containers’s](https://www.quobyte.com/containers%E2%80%99s) data center file system, a general-purpose scalable and fault-tolerant storage platform.|
-    |[https://github.com/emccode/rexray](https://github.com/emccode/rexray)|A volume plugin which is written in Go and provides advanced storage functionality for many platforms including VirtualBox, EC2, Google Compute Engine, OpenStack, and EMC.|
-    |[https://github.com/virtuozzo/docker-volume-ploop](https://github.com/virtuozzo/docker-volume-ploop)|A volume plugin with support for Virtuozzo Storage distributed cloud file system as well as ploop devices.|
-    |[https://github.com/vmware/docker-volume-vsphere](https://github.com/vmware/docker-volume-vsphere)|Docker Volume Driver for vSphere enables customers to address persistent storage requirements for Docker containers in vSphere environments.|
-    
 
 ### 해당 볼륨을 쓰는 컨테이너 생성
 
@@ -989,9 +953,9 @@ ubuntu:20.04 \\
 cat /root/volume
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d2ab3d8f-7e81-4216-96f6-e2cfb47212e7/Untitled.png)
+![Untitled](/images/container-tutorial/29.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d2013fd1-581f-4845-85ed-ba48b3787bc2/Untitled.png)
+![Untitled](/images/container-tutorial/30.png)
 
 볼륨은 디렉토리 하나에 상응하는 단위로서 docker engine에서 관리
 
@@ -1005,7 +969,7 @@ cat /root/volume
 sudo docker inspect --type volume myvolume
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea28449c-3050-40e2-aaae-f4814b716ef7/Untitled.png)
+![Untitled](/images/container-tutorial/31.png)
 
 해당 디렉토리를 뒤져보도록 하겠습니다.
 
@@ -1013,7 +977,7 @@ sudo docker inspect --type volume myvolume
 sudo ls /mnt/storage/docker/volumes/myvolume/_data
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9fd239ed-e8e5-4785-b6a2-1e658840c1fd/Untitled.png)
+![Untitled](/images/container-tutorial/32.png)
 
 ### 볼륨 자동 생성
 
@@ -1033,7 +997,7 @@ root@ada4230050e3:/# exit
 sudo docker volume ls
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d33be0da-26b3-488d-ab86-ade5d04247cf/Untitled.png)
+![Untitled](/images/container-tutorial/33.png)
 
 어떤 볼륨에 마운트 되었는지 확인하기 위해 docker inspect로 확인
 
@@ -1041,9 +1005,9 @@ sudo docker volume ls
 sudo docker inspect
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f050bc58-de70-44eb-9ca8-ece56dd6b7bd/Untitled.png)
+![Untitled](/images/container-tutorial/34.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1347a6d-455f-459e-9064-b2f96733d90e/Untitled.png)
+![Untitled](/images/container-tutorial/35.png)
 
 ### 불필요한 volume 삭제
 
@@ -1055,7 +1019,7 @@ sudo docker inspect
 sudo docker volume prune
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d4d821ee-e36b-42ad-8d5c-891a35923507/Untitled.png)
+![Untitled](/images/container-tutorial/36.png)
 
 ### mount 옵션
 
@@ -1068,7 +1032,7 @@ ubuntu:20.04 \\
 cat /root/volume
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/04c0e494-8828-4436-a650-68e4c33a956e/Untitled.png)
+![Untitled](/images/container-tutorial/37.png)
 
 # 도커 네트워크
 
@@ -1085,7 +1049,7 @@ cat /root/volume
 ifconfig
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b82e5323-4e86-4985-8ebd-577d1a1c004c/Untitled.png)
+![Untitled](/images/container-tutorial/38.png)
 
 ens4 : GCP의 내부 IP 할당 - 실제로 외부와 통신이 가능한 호스트의 네트워크 인터페이스
 
@@ -1093,7 +1057,7 @@ veth… : 컨테이너를 시작할 때 생성, 각 컨테이너의 eth0와 연�
 
 docker0 : bridge, 각 veth 인터페이스와 바인딩, 호스트의 ens4 인터페이스와 이어주는 역할
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8be00110-e94b-43c4-952b-07e6e0c93183/Untitled.png)
+![Untitled](/images/container-tutorial/39.png)
 
 실제로 바인딩됐는지 확인
 
@@ -1102,7 +1066,7 @@ docker0 : bridge, 각 veth 인터페이스와 바인딩, 호스트의 ens4 인�
 brctl show docker0
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25111ebe-879c-4d2b-b1c7-19e515c3aaf7/Untitled.png)
+![Untitled](/images/container-tutorial/40.png)
 
 ## 도커 네트워크 기능
 
@@ -1112,7 +1076,7 @@ brctl show docker0
 
 네트워크 목록 확인
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1987ac35-b063-49d4-b3ec-68fae96af187/Untitled.png)
+![Untitled](/images/container-tutorial/41.png)
 
 ### bridge 네트워크
 
@@ -1122,7 +1086,7 @@ docker network inspect옵션으로 bridge 세부 정보 확인
 sudo docker network inspect bridge
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f178236c-5d02-400e-a50e-d2aedb0148a6/Untitled.png)
+![Untitled](/images/container-tutorial/42.png)
 
 subnet : 172.17.0.0/16
 
@@ -1138,35 +1102,35 @@ ubuntu:20.04
 ifconfig
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a921cd6-977d-4db2-b9f5-3088ec4d4799/Untitled.png)
+![Untitled](/images/container-tutorial/43.png)
 
 disconnect/connect를 통해 컨테이너에 유동적으로 붙이고 뗄 수 있음
 
 단 특정 IP대역을 갖는 네트워크 모드에만 사용가능(bridge, overlay / host, none은 사용
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b0b3ee4-5c1e-4305-9a0e-ca2dd1aaede6/Untitled.png)
+![Untitled](/images/container-tutorial/44.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/246883c1-bf98-47e0-8d26-fa4af4e0e0b1/Untitled.png)
+![Untitled](/images/container-tutorial/45.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c2a04ad-0e64-4b60-a024-c7d6694ef54e/Untitled.png)
+![Untitled](/images/container-tutorial/46.png)
 
 ```bash
 sudo docker network disconnect mybridge mynetwork_container
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e89c959c-3526-4252-bd35-27d08544abc3/Untitled.png)
+![Untitled](/images/container-tutorial/47.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87ef9cbf-bad6-43e0-a1ef-c364c21b5d70/Untitled.png)
+![Untitled](/images/container-tutorial/48.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a688a8c-8c82-467a-a907-c21a37e6f9ed/Untitled.png)
+![Untitled](/images/container-tutorial/49.png)
 
 ```bash
 sudo docker network connect mybridge mynetwork_container
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e35be88f-4ec6-41ee-9b23-84ac023f9764/Untitled.png)
+![Untitled](/images/container-tutorial/50.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/374b7058-8ec0-4ec3-8a9a-5171acb57c67/Untitled.png)
+![Untitled](/images/container-tutorial/51.png)
 
 subnet, gateway, ip range 옵션 추가
 
@@ -1178,7 +1142,7 @@ sudo docker network create --driver=bridge \\
 my_custom_network
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ec9bb2b-57dd-4318-8893-6d498271d972/Untitled.png)
+![Untitled](/images/container-tutorial/52.png)
 
 ### host 네트워크
 
@@ -1198,7 +1162,7 @@ root@instance-node-1:/# apt install net-tools
 root@instance-node-1:/# ifconfig
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/47caa766-6901-42a3-a21a-567b0d690dce/Untitled.png)
+![Untitled](/images/container-tutorial/53.png)
 
 ### none 네트워크
 
@@ -1216,7 +1180,7 @@ ubuntu:14.04
 root@9a20605c7941:/# ifconfig
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/206b28a8-f310-48a5-b215-98e8648ccf96/Untitled.png)
+![Untitled](/images/container-tutorial/54.png)
 
 로컬호스트를 나타내는 lo 밖에 네트워크 인터페이스가 없음
 
@@ -1240,13 +1204,13 @@ sudo docker exec network_container_1 ifconfig
 sudo docker exec network_container_2 ifconfig
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3d87b2a-8339-4cfb-9465-c8647c18268f/Untitled.png)
+![Untitled](/images/container-tutorial/55.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0215015-8328-48c0-a617-01b4e90ae7df/Untitled.png)
+![Untitled](/images/container-tutorial/56.png)
 
 전부 같음
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/11672e8c-7fd9-4aa0-8744-8adac5abb607/Untitled.png)
+![Untitled](/images/container-tutorial/57.png)
 
 ### 브리지 네트워크와 —net-alias
 
@@ -1269,8 +1233,7 @@ sudo docker run -itd --name network_alias_container3 \\
 ubuntu:14.04
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7396643b-6cab-498e-adde-38a52c89dacc/Untitled.png)
-
+![Untitled](/images/container-tutorial/58.png)
 해당 호스트명으로 핑을 날려보겠습니다.
 
 ```bash
@@ -1283,7 +1246,7 @@ ubuntu:14.04
 root@3c8727c3f274:/# ping -c 1 lotte
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e4fada73-9145-4841-bb4c-f5ae08f6aa0e/Untitled.png)
+![Untitled](/images/container-tutorial/59.png)
 
 컨테이너 3개의 IP로 각각 PING이 전송된 것을 확인
 
@@ -1299,7 +1262,7 @@ root@3c8727c3f274:/# apt install dnsutils
 root@3c8727c3f274:/# dig lotte
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ee246e6d-891b-4e8b-ba7f-33f938a1aefe/Untitled.png)
+![Untitled](/images/container-tutorial/60.png)
 
 # 컨테이너 로깅
 
@@ -1317,7 +1280,7 @@ mysql:5.7
 sudo docker logs mysql
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25d7d1df-82d5-4162-9e07-34b1d3ebd70c/Untitled.png)
+![Untitled](/images/container-tutorial/61.png)
 
 -since : 특정시간 이후의 로그 확인 가능
 
@@ -1340,7 +1303,7 @@ echo syslogtest
 sudo tail /var/log/syslog
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f7cadbd8-b248-4990-8fee-1a1052651727/Untitled.png)
+![Untitled](/images/container-tutorial/62.png)
 
 # 컨테이너 자원 할당 제한
 
@@ -1361,7 +1324,7 @@ nginx
 sudo docker inspect memory_1g |grep \\"Memory\\"
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/73997f96-3108-4ef9-9d60-e0c6bb927462/Untitled.png)
+![Untitled](/images/container-tutorial/63.png)
 
 ## 컨테이너 cpu 제한
 
@@ -1380,7 +1343,7 @@ stress --cpu 1
 ps aux | grep stress
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a77a70ce-2118-4a09-811c-004f769405bd/Untitled.png)
+![Untitled](/images/container-tutorial/64.png)
 
 —cpuset-cpus 호스트에 cpu가 여러개 있을 때 특정 cpu만 사용하도록 설정
 
@@ -1393,9 +1356,9 @@ alicek106/stress \\
 stress --cpu 1
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/968e13dc-3ce0-44b2-9b30-7a719e8f6825/Untitled.png)
+![Untitled](/images/container-tutorial/65.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ba981f4b-6516-451a-a11e-3b9220bf9058/Untitled.png)
+![Untitled](/images/container-tutorial/66.png)
 
 —cpu-period : cpu주기 (기본 100000) —cpu-quota : period 중 cpu 스케줄링에 얼마나 할당할건지
 
@@ -1408,7 +1371,7 @@ alicek106/stress \\
 stress --cpu 1
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d6cf1916-4041-4bd6-b6de-b2708be99936/Untitled.png)
+![Untitled](/images/container-tutorial/67.png)
 
 ## 컨테이너 Block I/O 제한
 
