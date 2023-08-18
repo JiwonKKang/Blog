@@ -9,7 +9,10 @@ tags: [docker, spring]
 
 > # A Better Dockerfile
 
-Spring Boot fat JAR은 JAR 자체가 패키징되는 방식 때문에 자연스럽게 “layers"를 갖습니다. 먼저 압축을 풀면 이미 외부 종속성과 내부 종속성이 구분되어 있습니다. Docker 빌드의 한 단계에서 이 작업을 수행하려면 먼저 JAR의 압축을 풀어야 합니다. 다음 명령은 Spring Boot fat JAR의 압축을 풉니다.
+Spring Boot fat JAR은 JAR 자체가 패키징되는 방식 때문에 자연스럽게 “layers"를 갖습니다. 
+먼저 압축을 풀면 이미 외부 종속성과 내부 종속성이 구분되어 있습니다.
+Docker 빌드의 한 단계에서 이 작업을 수행하려면 먼저 JAR의 압축을 풀어야 합니다. 
+다음 명령은 Spring Boot fat JAR의 압축을 풉니다.
 
 압축해제
 
@@ -43,15 +46,20 @@ docker build -t sbb .
 docker run -p 8080:8080  sbb
 ```
 
-**이제 세 개의 계층이 있으며 모든 애플리케이션 리소스는 이후 두 계층에 있습니다. 응용 프로그램 종속성이 변경되지 않으면 첫 번째 계층(BOOT-INF/lib에서)을 변경할 필요가 없으므로 기본 계층이 이미 캐시되어 있는 한 빌드가 더 빠르고 런타임 시 컨테이너 시작도 더 빠릅니다. .**
+**이제 세 개의 계층이 있으며 모든 애플리케이션 리소스는 이후 두 계층에 있습니다. 
+응용 프로그램 종속성이 변경되지 않으면 첫 번째 계층(BOOT-INF/lib에서)을 변경할 필요가 없으므로 
+기본 계층이 이미 캐시되어 있는 한 빌드가 더 빠르고 런타임 시 컨테이너 시작도 더 빠릅니다. **
 
-<aside> 💡 **하드 코딩된 기본 애플리케이션 클래스인 com.mygroup.sbb.SbbApplication을 사용했습니다. 이는 귀하의 응용 프로그램에 따라 다를 수 있습니다. 원하는 경우 다른 ARG로 매개변수화할 수 있습니다. Spring Boot Fat JarLauncher를 이미지에 복사하여 애플리케이션을 실행하는 데 사용할 수도 있습니다. 작동하고 기본 클래스를 지정할 필요가 없지만 시작 시 속도가 약간 느려집니다.**
+<aside> 💡 **하드 코딩된 기본 애플리케이션 클래스인 com.mygroup.sbb.SbbApplication을 사용했습니다. 
+이는 귀하의 응용 프로그램에 따라 다를 수 있습니다. 원하는 경우 다른 ARG로 매개변수화할 수 있습니다. Spring Boot Fat JarLauncher를 이미지에 복사하여 애플리케이션을 실행하는 데 사용할 수도 있습니다.
+작동하고 기본 클래스를 지정할 필요가 없지만 시작 시 속도가 약간 느려집니다.**
 
 </aside>
 
 > ## Spring Boot Layer Index
 
-**Spring Boot 2.3.0부터 Spring Boot Maven 또는 Gradle 플러그인으로 빌드된 JAR 파일에는 JAR 파일에 레이어 정보가 포함됩니다. 이 계층 정보는 응용 프로그램 빌드 간에 변경될 가능성에 따라 응용 프로그램의 일부를 구분합니다. 이를 사용하여 Docker 이미지 레이어를 더욱 효율적으로 만들 수 있습니다.**
+**Spring Boot 2.3.0부터 Spring Boot Maven 또는 Gradle 플러그인으로 빌드된 JAR 파일에는 JAR 파일에 레이어 정보가 포함됩니다. 
+이 계층 정보는 응용 프로그램 빌드 간에 변경될 가능성에 따라 응용 프로그램의 일부를 구분합니다. 이를 사용하여 Docker 이미지 레이어를 더욱 효율적으로 만들 수 있습니다.**
 
 **레이어 정보는 JAR 콘텐츠를 각 레이어의 디렉터리로 추출하는 데 사용할 수 있습니다. **
 
@@ -98,7 +106,11 @@ docker run -p 8080:8080  sbb
 
 > ## Multi-Stage Build - DEPENDECY
 
-위에서 만든 Dockerfile은 fat JAR이 이미 command line에서 빌드되었다고 가정했습니다. multi-stage 빌드를 사용하고 한 이미지에서 다른 이미지로 결과를 복사하여 docker에서 해당 단계를 수행할 수도 있습니다. 다음 예제에서는 Gradle을 사용하여 이를 수행합니다.
+위에서 만든 Dockerfile은 fat JAR이 이미 command line에서 빌드되었다고 가정했습니다. 
+multi-stage 빌드를 사용하고 한 이미지에서 다른 이미지로 결과를 복사하여 
+docker에서 해당 단계를 수행할 수도 있습니다. 
+
+다음 예제에서는 Gradle을 사용하여 이를 수행합니다.
 
 ```docker
 FROM eclipse-temurin:17-jdk-alpine as build
@@ -139,7 +151,8 @@ docker run -p 8080:8080  sbb
 
 > ## Multi-Stage Build - EXTRACT
 
-이번엔 jar파일의 extract를 사용하여 레이어를 추출하고 그 레이어들을 이용해서 Docker image를 Multi-Stage build로 만들어보겠습니다.
+이번엔 jar파일의 extract를 사용하여 레이어를 추출하고 그 레이어들을 이용해서 
+Docker image를 Multi-Stage build로 만들어보겠습니다.
 
 ```dockerfile
 FROM eclipse-temurin:17-jdk-alpine as build  
@@ -167,7 +180,7 @@ ENTRYPOINT ["java","org.springframework.boot.loader.JarLauncher"]
 
 위 코드를 간략히 설명하자면
 
-**스테이지 1 **
+**스테이지 1**
 1. 베이스이미지 eclipse-temurin:17-jdk-alpine로 설정
 2. 디렉토리를 /workspace/app 이동(cd와는 레이어가 생기지않는다는 차이점이있습니다)
 3. 빌드에 필요한 파일들 모두 컨테이너에 COPY
