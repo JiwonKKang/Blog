@@ -9,10 +9,10 @@ tags: [docker, spring]
 
 > # A Better Dockerfile
 
-Spring Boot fat JAR은 JAR 자체가 패키징되는 방식 때문에 자연스럽게 “layers"를 갖습니다. 
-먼저 압축을 풀면 이미 외부 종속성과 내부 종속성이 구분되어 있습니다.
-Docker 빌드의 한 단계에서 이 작업을 수행하려면 먼저 JAR의 압축을 풀어야 합니다. 
-다음 명령은 Spring Boot fat JAR의 압축을 풉니다.
+Spring Boot fat JAR은 JAR 자체가 패키징되는 방식 때문에 자연스럽게 “layers"를 갖습니다.   
+먼저 압축을 풀면 이미 외부 종속성과 내부 종속성이 구분되어 있습니다.  
+Docker 빌드의 한 단계에서 이 작업을 수행하려면 먼저 JAR의 압축을 풀어야 합니다.   
+다음 명령은 Spring Boot fat JAR의 압축을 풉니다.  
 
 압축해제
 
