@@ -631,7 +631,7 @@ sudo docker run --name my-apache-server -p 8080:80 httpd
 
 그러나 컨테이너에 애플리케이션을 하나만 동작시키면 컨테이너 간의 독립성을 보장함과 동시에 애플리케이션의 버전 관리, 소스코드 모듈화 등이 더욱 쉬워집니다.
 
-이 구조는 docker community와 docker 공식 문서에서도 구너장하는 구조입니다.
+이 구조는 docker community와 docker 공식 문서에서도 권장하는 구조입니다.
 
 docker는 one container, one process가 그들의 철학이기 떄문이죠
 
