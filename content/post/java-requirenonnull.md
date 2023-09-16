@@ -72,7 +72,6 @@ A a = null;
 B b = new B(a);     // 생성 시점에 바로 NPE 발생
 ```
 
----
 
 반면 다음과 같이 requireNonNull을 사용하지 않은 경우는 어떨까?
 
@@ -141,7 +140,6 @@ requireNonNullElseGet(T obj, Supplier<? extends T> supplier)
 
 <br><br>
 
----
 
 >_출처_
 
