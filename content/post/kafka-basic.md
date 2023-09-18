@@ -23,7 +23,7 @@ Kafka Producer가 Broker에게 데이터를 전달하는 과정을 먼저 알아
 
 Producer Client는 처음부터 Topic data를 보내는 것이 아니라 topic이 저장된 위치를 알기 위해 Metadata를 Kafka Broker 중 하나에게 요청합니다. 요청을 받은 Broker는 Client가 원하는 topic이 위치한 서버 리스트를 보내줍니다. 그리고 **최종적으로 Client는 Broker로부터 받은 서버 리스트를 참고해서, 서버에 직접 접근 및 데이터 전송을 합니다.**
 
-Docker로 구서오딘 Kafka 클러스터에서는 각 Broker가 hostname을 포함하여 서로의 정보들을 사전에 알고 있습니다. 그래서 클러스터 내부에서  Produce / Consume을 진행해도 간편하게 서비스 이름과 port를 반환해주면됩니다. 
+Docker로 구성한 Kafka 클러스터에서는 각 Broker가 hostname을 포함하여 서로의 정보들을 사전에 알고 있습니다. 그래서 클러스터 내부에서  Produce / Consume을 진행해도 간편하게 서비스 이름과 port를 반환해주면됩니다. 
 
 **하지만 문제는 외부에서 Kafka 클러스터에 접근할 때입니다. 각 Broker의 hostname을 반환해주더라도 외부에서는 해당 hostname의 정보를 가지고 있지 않기 때문에  아마 에러가 발생할 겁니다.**
 
