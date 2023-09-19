@@ -15,7 +15,7 @@ tags:
 
 1. Client 는 Master에는 Write. Replica에는 Read request를 날림
 2. 어떤 이유로 Master-Replica 전환
-3. Client 는 새로 바뀐 정보가 아닌 에전 Master/Replica 정보를 게속 참조하며 Write 가 불가하다는 메세지가 발생됨
+3. Client 는 새로 바뀐 정보가 아닌 에전 Master/Replica 정보를 게속 참조하며 Write 가 불가하다는 메세지가 발생됨. 
 
 ![](/images/redis-error-case/case1.png)
 
