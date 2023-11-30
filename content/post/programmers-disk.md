@@ -1,7 +1,7 @@
 ---
 title: "[프로그래머스] 디스크 컨트롤러 - 자바"
 date: 2023-11-30T19:26:15+09:00
-draft: true
+draft: false
 pin: false
 summary: 프로그래머스 Level 3 디스크 컨트롤러 자바 풀이
 tags:
