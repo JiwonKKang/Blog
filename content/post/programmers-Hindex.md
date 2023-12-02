@@ -1,10 +1,9 @@
-이
 ---
 title: "[프로그래머스] H-Index - 자바"
-date: 2023-12-03T01:26:14+09:00
-draft: true
+date: 2023-12-03T01:37:28+09:00
+draft: false
 pin: false
-summary: "[프로그래머스] H-Index Level 2 - 자바 풀이"
+summary: "[프로그래머스] \bH-Index Level 2 - 자바풀이"
 tags:
   - programmers
 ---
@@ -41,5 +40,5 @@ class Solution {
 ### 삽질
 ---
 - 논문의 갯수를 리턴해야하는데 계속 논문인용횟수를 리턴해서 테스트 케이스를 통과하지못했다;;
-- 문제를 잘 이해하도록 하자...
+- 
 
