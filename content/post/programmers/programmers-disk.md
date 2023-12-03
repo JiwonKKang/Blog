@@ -6,6 +6,7 @@ pin: false
 summary: 프로그래머스 Level 3 디스크 컨트롤러 자바 풀이
 tags:
   - programmers
+  - stack/queue
 ---
 
 > # [프로그래머스] 디스크 컨트롤러 - 자바

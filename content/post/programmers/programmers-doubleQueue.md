@@ -6,6 +6,7 @@ pin: false
 summary: "[프로그래머스] 이중 우선순위 큐  Level 3 - 자바풀이"
 tags:
   - programmers
+  - heap
 ---
 
 

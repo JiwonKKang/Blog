@@ -6,6 +6,7 @@ pin: false
 summary: "[프로그래머스] \bH-Index Level 2 - 자바풀이"
 tags:
   - programmers
+  - sort
 ---
 
 > # [프로그래머스] H-Index - 자바

@@ -6,6 +6,7 @@ pin: false
 summary: "[프로그래머스] 개인정보 수집 유효기간 - 2023 KAKAO BLIND RECRUITMENT"
 tags:
   - programmers
+  - kakao
 ---
 
 > # [프로그래머스] 개인정보 수집 유효기간 - 자바

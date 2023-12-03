@@ -6,6 +6,7 @@ pin: false
 summary: "[프로그래머스] 성격 유형 검사 - 2022 KAKAO TECH INTERNSHIP"
 tags:
   - programmers
+  - kakao
 ---
 
 
