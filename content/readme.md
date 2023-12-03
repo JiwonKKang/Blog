@@ -1,4 +1,6 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Oleo+Script&color=539bf5&size=35&center=true&vCenter=true&width=450&height=53&lines=Hi+there%2C+welcome+Jiwon's+blog!!)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?
+
+![cylinder](https://capsule-render.vercel.app/api?type=cylinder&color=151515&text=블로그%20맞아요%20!!&fontAlignY=45&fontSize=40&height=150&animation=blinking&desc=깃허브%20아니에요&descAlignY=70&fontColor=539bf5)
 
 ## Skills
 
